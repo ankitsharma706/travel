@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Travel Wanderlust</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      background: #2c3e50;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-container .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #3498db;
+    }
+
+    .menu-toggle {
+      display: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 50px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .contact button {
+      background: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #2980b9;
+    }
+
+    .contact p {
+      margin-top: 20px;
+    }
+
+    .contact a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    /* Footer */
+    .footer {
+      background: #2c3e50;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #3498db;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .social-icons {
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 24px;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #3498db;
+    }
+
+    .newsletter form {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      width: 250px;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      background: #3498db;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #3498db;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      display: none;
+    }
+
+    .back-to-top:hover {
+      background: #2980b9;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #2c3e50;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact h1 {
+        font-size: 28px;
+      }
+
+      .newsletter input[type="email"] {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Travel Wanderlust</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="travel-tips.html">Travel Tips</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Or reach us via email: <a href="mailto:info@travelwanderlust.com">info@travelwanderlust.com</a></p>
+  </section ><!-- Footer -->
+  <footer class="footer">
+    <p>Follow us on social media</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="newsletter">
+      <form>
+        <input type="email" placeholder="Subscribe to our newsletter" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <p style="margin-top: 20px;">
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Service</a>
+    </p>
+    <p>© 2025 Travel Wanderlust. All rights reserved.</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- JavaScript -->
+  <script>
+    // Menu Toggle for Mobile
+    $(document).ready(function () {
+      $('.menu-toggle').click(function () {
+        $('.nav-links').toggleClass('active');
+      });
+
+      // Close menu when a link is clicked
+      $('.nav-links a').click(function () {
+        $('.nav-links').removeClass('active');
+      });
+
+      // Back to Top Button
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.back-to-top').fadeIn();
+        } else {
+          $('.back-to-top').fadeOut();
+        }
+      });
+
+      $('.back-to-top').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 600);
+      });
+
+      // Basic form submission handling (for demo purposes)
+      $('#contact-form').submit(function (e) {
+        e.preventDefault();
+        alert('Message sent! We will get back to you soon.');
+      });
+
+      $('.newsletter form').submit(function (e) {
+        e.preventDefault();
+        alert('Thank you for subscribing!');
+      });
+    });
+  </script>
+</body>
+
+</html>
